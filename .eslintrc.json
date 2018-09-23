@@ -1,0 +1,33 @@
+{
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module"
+  },
+  "globals": {
+    "_": false,
+    "r": false,
+    "it": false,
+    "config": false,
+    "Server": false,
+    "describe": false,
+    "__log": false,
+    "__logInfo": false,
+    "__logError": false,
+    "__logWarning": false,
+    "__logUserAction": false,
+    "__logRecapGame": false,
+    "__logRecapTwitter": false
+  },
+  "rules": {
+    "no-console": 0,
+    "indent": 0,
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "semi": ["error", "always"]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "roles": ["USER", "ADMIN"],
+  "locales": ["en", "fr"],
+  "disabledAfter": 5,
+  "twitterLimits": {
+    "description": 160,
+    "location": 70,
+    "name": 50
+  },
+  "limits": {
+    "ppTrigger": 15,
+    "accountbyGame": 3
+  }
+}

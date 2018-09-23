@@ -1,0 +1,29 @@
+{
+  "apps": [
+    {
+      "name": "twitelo-epitech-api",
+      "script": "./app.js",
+      "watch": false,
+      "restart_delay": 1000,
+      "ignore_watch": ["node_modules", "logs/*", "public/*", "*.log", ".git"],
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "env": {
+        "NODE_ENV": "prod"
+      }
+    }
+  ],
+  "deploy": {
+    "production": {
+      "user": "root",
+      "host": "51.254.118.165",
+      "key": "~/.ssh/ssh_ifo_vps",
+      "ref": "origin/master",
+      "repo": "git@github.com:iFonny/twitelo-server.git",
+      "path": "/root/www/EpitechTwiteloAPI/production/",
+      "post-deploy": "cp /root/configs/EpitechTwiteloAPI/secret.json ./configs/; npm install && pm2 startOrRestart pm2-config.json --only twitelo-epitech-api",
+      "env": {
+        "NODE_ENV": "prod"
+      }
+    }
+  }
+}
