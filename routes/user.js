@@ -151,7 +151,7 @@ module.exports = {
       }),
       (req, res) => {
         Server.fn.routes.user
-          .getLatestActiveUsers(10)
+          .getLatestUsers(5)
           .then(data => res.status(data.status).json(data))
           .catch(err => res.status(err.status).json(err));
       },

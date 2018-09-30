@@ -23,3 +23,5 @@ public/media/test/*
 dump.rdb
 configs/secret\.json
 
+
+rethinkdb_data/

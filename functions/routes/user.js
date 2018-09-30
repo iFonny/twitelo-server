@@ -566,6 +566,24 @@ module.exports = {
     });
   },
 
+  getLatestUsers(limit) {
+    return new Promise((resolve, reject) => {
+      Server.fn.dbMethods.user
+        .getLatest(limit)
+        .then(users => resolve(Server.fn.api.jsonSuccess(200, users)))
+        .catch(err =>
+          reject(
+            Server.fn.api.jsonError(
+              500,
+              'Internal server error',
+              '[DB] getLatestUsers() error',
+              err,
+            ),
+          ),
+        );
+    });
+  },
+
   // Useless because Twitter Updater update active users every 1 min
   getUpdatedTwitterUser(twitterUsers) {
     return new Promise((resolve, reject) => {

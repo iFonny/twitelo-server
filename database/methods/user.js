@@ -36,6 +36,17 @@ module.exports.getLatestActive = (limit = 10) => {
     .run();
 };
 
+module.exports.getLatest = (limit = 10) => {
+  return r
+    .table('user')
+    .orderBy({
+      index: r.desc('created'),
+    })
+    .limit(limit)
+    .pluck('id', 'name', 'username', 'twitter_id', 'profile_image_url')
+    .run();
+};
+
 module.exports.getUsersToUpdate = () => {
   return r
     .table('user')
