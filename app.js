@@ -266,7 +266,7 @@ Server.fn.db.checkOrCreateTable().then(() => {
     //     Game data updater                                                 //
     //=======================================================================//
 
-    /*  function gameUpdater(game) {
+    function gameUpdater(game) {
       Server.fn.api
         .getAndUpdateGameData(game)
         .then(() => setTimeout(() => gameUpdater(game), 60 * 1000)); // 1 minute
@@ -274,7 +274,7 @@ Server.fn.db.checkOrCreateTable().then(() => {
 
     for (const gameID in Server.game) {
       gameUpdater(Server.game[gameID]);
-    } */
+    }
 
     //=======================================================================//
     //     Twitter updater                                                   //
