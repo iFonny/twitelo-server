@@ -22,8 +22,9 @@ npm start
 
 ## CONFIG
 
-SSH server config : `pm2-config.json`
-Rename `secret.json.example` and add secrets and API Keys
+API Config: Rename `secret.json.example` and add secrets and API Keys
+
+SSH server config: `pm2-config.json`
 
 ## SERVER PREREQUISITES
 
